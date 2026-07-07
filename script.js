@@ -16,13 +16,43 @@ function addStudent() {
     let name = document.getElementById("name").value;
     let roll = document.getElementById("roll").value;
     let course = document.getElementById("course").value;
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+let editIndex = localStorage.getItem("editIndex");
+
+if (editIndex !== null) {
+
+    students[editIndex] = {
+        name: name,
+        roll: roll,
+        course: course
+    };
+
+    localStorage.setItem("students", JSON.stringify(students));
+
+    localStorage.removeItem("editIndex");
+    localStorage.removeItem("editStudent");
+
+    alert("Student Updated Successfully!");
+
+    window.location.href = "dashboard.html";
+
+    return;
+}
 
     if (name === "" || roll === "" || course === "") {
         alert("Please fill all fields.");
         return;
     }
+    // Check if roll number already exists
+let exists = students.some(function(student, index) {
+    return student.roll === roll && index != editIndex;
+});
 
-    let students = JSON.parse(localStorage.getItem("students")) || [];
+if (exists) {
+    alert("Roll Number already exists!");
+    return;
+}
 
     students.push({
         name: name,
@@ -53,9 +83,11 @@ let row = `
         <td>${student.name}</td>
         <td>${student.roll}</td>
         <td>${student.course}</td>
-        <td>
-            <button onclick="deleteStudent(${index})">Delete</button>
-        </td>
+     <td>
+    <button onclick="viewStudent(${index})">View</button>
+    <button onclick="editStudent(${index})">Edit</button>
+    <button onclick="deleteStudent(${index})">Delete</button>
+</td>  
     </tr>
 `;
         tableBody.innerHTML += row;
@@ -73,4 +105,115 @@ function deleteStudent(index) {
     localStorage.setItem("students", JSON.stringify(students));
 
     displayStudents();
+}
+function editStudent(index) {
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    let student = students[index];
+
+    localStorage.setItem("editIndex", index);
+
+    localStorage.setItem("editStudent", JSON.stringify(student));
+
+    window.location.href = "add_student.html";
+}
+
+if (window.location.pathname.includes("add_student.html")) {
+
+    let student = JSON.parse(localStorage.getItem("editStudent"));
+
+    if (student) {
+        document.getElementById("name").value = student.name;
+        document.getElementById("roll").value = student.roll;
+        document.getElementById("course").value = student.course;
+
+        document.querySelector("button").innerText = "Update Student";
+    }
+}
+function searchStudent() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let rows = document.querySelectorAll("#studentTable tbody tr");
+
+    rows.forEach(function(row) {
+
+        let name = row.cells[0].innerText.toLowerCase();
+
+        if (name.includes(input)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+
+    });
+
+}
+function logout() {
+
+    if (confirm("Are you sure you want to logout?")) {
+
+        window.location.href = "index.html";
+
+    }
+
+}
+function viewStudent(index) {
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    localStorage.setItem("viewStudent", JSON.stringify(students[index]));
+
+    window.location.href = "view_student.html";
+
+}
+if (window.location.pathname.includes("view_student.html")) {
+
+    let student = JSON.parse(localStorage.getItem("viewStudent"));
+
+    if (student) {
+
+        document.getElementById("studentName").innerText = student.name;
+        document.getElementById("studentRoll").innerText = student.roll;
+        document.getElementById("studentCourse").innerText = student.course;
+
+    }
+
+}
+function exportStudents() {
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    if (students.length === 0) {
+        alert("No student data available!");
+        return;
+    }
+
+    let csv = "Name,Roll Number,Course\n";
+
+    students.forEach(function(student) {
+        csv += `${student.name},${student.roll},${student.course}\n`;
+    });
+
+    let blob = new Blob([csv], { type: "text/csv" });
+
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+
+    link.download = "students.csv";
+
+    link.click();
+}
+function clearAllStudents() {
+
+    if (confirm("Are you sure you want to delete all students?")) {
+
+        localStorage.removeItem("students");
+
+        alert("All students have been deleted.");
+
+        displayStudents();
+    }
+
 }
