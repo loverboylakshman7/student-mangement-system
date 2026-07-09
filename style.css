@@ -293,3 +293,87 @@ margin-top:20px;
 .form-card input{
 margin-bottom:10px;
 }
+
+
+
+
+
+.hero{
+text-align:center;
+animation:fadeUp .8s ease;
+}
+
+.hero-icon{
+width:130px;
+height:130px;
+margin:auto;
+margin-bottom:25px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+color:white;
+background:linear-gradient(135deg,#00d4ff,#2563eb,#7c3aed);
+box-shadow:0 0 35px rgba(37,99,235,.5);
+animation:float 3s ease-in-out infinite;
+}
+
+.subtitle{
+font-size:20px;
+color:#cbd5e1;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.description{
+color:#e2e8f0;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+border-radius:18px;
+padding:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.card h2{
+color:#38bdf8;
+font-size:30px;
+margin-bottom:10px;
+}
+
+.card p{
+color:white;
+font-size:15px;
+margin:0;
+}
+
+.start-btn{
+width:100%;
+font-size:20px;
+padding:16px;
+}
+
+@media(max-width:650px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+}
