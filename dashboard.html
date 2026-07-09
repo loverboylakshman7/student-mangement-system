@@ -1,38 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 <body>
 
-    <h2>Student Dashboard</h2>
-<button onclick="logout()">Logout</button>
-<button onclick="exportStudents()">Export to Excel</button>
-<button onclick="clearAllStudents()">Clear All Students</button>
-  <input type="text" id="search" placeholder="Search by Name..." onkeyup="searchStudent()">
-<br><br>  
+<div class="container">
 
-    <a href="add_student.html">
-        <button>Add New Student</button>
-    </a>
+<div class="dashboard-header">
 
-    <br><br>
+<div class="dashboard-icon">
+<i class="fa-solid fa-chart-simple"></i>
+</div>
 
-    <table border="1" width="100%" id="studentTable">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Roll No</th>
-                <th>Course</th>
-            </tr>
-        </thead>
-        <tbody>
+<h1>Student Dashboard</h1>
 
-        </tbody>
-    </table>
+<p class="subtitle">
+Manage all student records from one place.
+</p>
 
-    <script src="script.js"></script>
+</div>
+
+<div class="action-bar">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Student..."
+onkeyup="searchStudent()">
+
+<button onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</button>
+
+<button onclick="exportStudents()">
+<i class="fa-solid fa-file-excel"></i>
+Export
+</button>
+
+<button onclick="clearAllStudents()">
+<i class="fa-solid fa-trash"></i>
+Clear
+</button>
+
+<a href="add_student.html">
+
+<button>
+
+<i class="fa-solid fa-user-plus"></i>
+
+Add Student
+
+</button>
+
+</a>
+
+</div>
+
+<div class="table-card">
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+
+<th>
+<i class="fa-solid fa-user"></i>
+Name
+</th>
+
+<th>
+<i class="fa-solid fa-id-card"></i>
+Roll Number
+</th>
+
+<th>
+<i class="fa-solid fa-book"></i>
+Course
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
