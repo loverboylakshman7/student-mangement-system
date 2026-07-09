@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Details</title>
+
+    <title>Student Profile</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-    <h2>Student Details</h2>
+<div class="container">
 
-    <p><strong>Name:</strong> <span id="studentName"></span></p>
+    <div class="profile-card">
 
-    <p><strong>Roll Number:</strong> <span id="studentRoll"></span></p>
+        <div class="profile-image">
+            <i class="fa-solid fa-user-graduate"></i>
+        </div>
 
-    <p><strong>Course:</strong> <span id="studentCourse"></span></p>
+        <h1>Student Profile</h1>
 
-    <button onclick="window.location.href='dashboard.html'">
-        Back
-    </button>
+        <div class="info-box">
 
-    <script src="script.js"></script>
+            <div class="info">
+                <i class="fa-solid fa-user"></i>
+                <span>Name</span>
+                <strong id="studentName"></strong>
+            </div>
+
+            <div class="info">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Roll Number</span>
+                <strong id="studentRoll"></strong>
+            </div>
+
+            <div class="info">
+                <i class="fa-solid fa-book"></i>
+                <span>Course</span>
+                <strong id="studentCourse"></strong>
+            </div>
+
+        </div>
+
+        <button onclick="window.location.href='dashboard.html'">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
