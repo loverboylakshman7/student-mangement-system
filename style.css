@@ -148,3 +148,55 @@ button{
 }
 
 }
+
+
+
+.profile-card{
+    text-align:center;
+}
+
+.profile-image{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    font-size:55px;
+    color:white;
+    margin-bottom:25px;
+    box-shadow:0 0 35px rgba(0,114,255,.4);
+}
+
+.info-box{
+    margin-top:20px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    margin:15px 0;
+    border-radius:15px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+}
+
+.info i{
+    color:#38bdf8;
+    font-size:20px;
+}
+
+.info span{
+    flex:1;
+    text-align:left;
+    margin-left:15px;
+    color:white;
+}
+
+.info strong{
+    color:#ffffff;
+}
