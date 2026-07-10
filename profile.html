@@ -1,17 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>profile</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Admin Profile</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<h1>Profile Page</h1>
+<div class="sidebar">
+
+<h2>🎓 StudentMS</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="attendance.html">Attendance</a></li>
+
+<li><a href="reports.html">Reports</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+<li><a href="settings.html">Settings</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Administrator Profile</h1>
+
+</header>
+
+<div class="profile-card">
+
+<div class="profile-image">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<h2>Administrator</h2>
+
+<p>Student Management System</p>
+
+</div>
+
+<div class="profile-form">
+
+<h2>Edit Profile</h2>
+
+<input
+type="text"
+id="adminName"
+placeholder="Administrator Name">
+
+<input
+type="email"
+id="adminEmail"
+placeholder="Email Address">
+
+<input
+type="text"
+id="adminPhone"
+placeholder="Phone Number">
+
+<input
+type="text"
+id="collegeName"
+placeholder="College Name">
+
+<button onclick="saveProfile()">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Profile
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/profile.js"></script>
 
 </body>
 
