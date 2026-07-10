@@ -1,17 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Settings</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<h1>Settings Page</h1>
+<div class="sidebar">
+
+<h2>🎓 StudentMS</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="attendance.html">Attendance</a></li>
+
+<li><a href="reports.html">Reports</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+<li><a href="settings.html">Settings</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>System Settings</h1>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-moon"></i>
+
+<h2>Dark Mode</h2>
+
+<button onclick="toggleDarkMode()">
+
+Enable / Disable
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-download"></i>
+
+<h2>Backup Data</h2>
+
+<button onclick="backupData()">
+
+Backup
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-upload"></i>
+
+<h2>Restore Data</h2>
+
+<button onclick="restoreData()">
+
+Restore
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<h2>Logout</h2>
+
+<button onclick="logout()">
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/settings.js"></script>
 
 </body>
 
