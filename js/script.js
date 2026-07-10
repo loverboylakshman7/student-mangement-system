@@ -1,23 +1,8 @@
-// Login Function
-function login() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-
-    if (username === "admin" && password === "1234") {
-        alert("Login Successful!");
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Invalid Username or Password");
-    }
-}
-
-// Add Student Function
 function addStudent() {
     let name = document.getElementById("name").value;
     let roll = document.getElementById("roll").value;
     let course = document.getElementById("course").value;
-    let students = JSON.parse(localStorage.getItem("students")) || [];
-
+   let students = StudentManager.getAllStudents();
 let editIndex = localStorage.getItem("editIndex");
 
 if (editIndex !== null) {
@@ -27,8 +12,7 @@ if (editIndex !== null) {
         roll: roll,
         course: course
     };
-
-    localStorage.setItem("students", JSON.stringify(students));
+StudentManager.saveAllStudents(students);
 
     localStorage.removeItem("editIndex");
     localStorage.removeItem("editStudent");
@@ -44,9 +28,8 @@ if (editIndex !== null) {
         alert("Please fill all fields.");
         return;
     }
-    // Check if roll number already exists
-let exists = students.some(function(student, index) {
-    return student.roll === roll && index != editIndex;
+ let exists = students.some(function(student, index) {
+    return student.roll === roll && index !== Number(editIndex);
 });
 
 if (exists) {
@@ -54,21 +37,23 @@ if (exists) {
     return;
 }
 
-    students.push({
-        name: name,
-        roll: roll,
-        course: course
-    });
+ students.push({
+    id: Date.now(),
+    name: name.trim(),
+    roll: roll.trim(),
+    course: course.trim(),
+    createdAt: new Date().toLocaleString()
+});
 
-    localStorage.setItem("students", JSON.stringify(students));
-
+    
+StudentManager.saveAllStudents(students);
     alert("Student Added Successfully!");
 
     document.getElementById("studentForm").reset();
 }
 // Display Students on Dashboard
 function displayStudents() {
-    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let students = StudentManager.getAllStudents();
 
     let tableBody = document.querySelector("#studentTable tbody");
 
@@ -147,15 +132,6 @@ function searchStudent() {
         }
 
     });
-
-}
-function logout() {
-
-    if (confirm("Are you sure you want to logout?")) {
-
-        window.location.href = "index.html";
-
-    }
 
 }
 function viewStudent(index) {
