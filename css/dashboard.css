@@ -329,3 +329,109 @@ text-align:center;
 border-bottom:1px solid #ddd;
 
 }
+
+/* ==========================
+   Profile Page
+========================== */
+
+.profile-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+margin-bottom:30px;
+
+}
+
+.profile-image{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#2563eb;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:55px;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.profile-form{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.profile-form h2{
+
+margin-bottom:20px;
+
+}
+
+.profile-form input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:18px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.profile-form button{
+
+background:#2563eb;
+
+color:white;
+
+padding:14px 30px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+.profile-form button:hover{
+
+background:#1d4ed8;
+
+}
