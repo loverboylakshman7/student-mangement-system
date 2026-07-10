@@ -435,3 +435,39 @@ transition:.3s;
 background:#1d4ed8;
 
 }
+
+/* ==========================
+   Dark Mode
+========================== */
+
+.dark-mode{
+
+background:#121212;
+
+color:white;
+
+}
+
+.dark-mode .card,
+.dark-mode .profile-card,
+.dark-mode .profile-form,
+.dark-mode .recent,
+.dark-mode .quick{
+
+background:#1f1f1f;
+
+color:white;
+
+}
+
+.dark-mode table th{
+
+background:#333;
+
+}
+
+.dark-mode table td{
+
+color:white;
+
+}
