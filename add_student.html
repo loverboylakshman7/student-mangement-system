@@ -31,49 +31,56 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 Create a new student profile
 </p>
 
-<form id="studentForm">
+<div class="profile-form">
 
-<label>
-<i class="fa-solid fa-user"></i>
-Student Name
-</label>
+<h2>Student Information</h2>
 
 <input
 type="text"
 id="name"
-placeholder="Enter Student Name">
-
-<label>
-<i class="fa-solid fa-id-card"></i>
-Roll Number
-</label>
+placeholder="Full Name">
 
 <input
 type="text"
 id="roll"
-placeholder="Enter Roll Number">
-
-<label>
-<i class="fa-solid fa-book"></i>
-Course
-</label>
+placeholder="Roll Number">
 
 <input
 type="text"
 id="course"
-placeholder="Enter Course">
+placeholder="Course">
 
-<button
-type="button"
-onclick="addStudent()">
+<input
+type="email"
+id="email"
+placeholder="Email Address">
 
-<i class="fa-solid fa-plus"></i>
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number">
 
-Add Student
+<select id="gender">
+
+<option value="">Select Gender</option>
+
+<option>Male</option>
+
+<option>Female</option>
+
+<option>Other</option>
+
+</select>
+
+<button onclick="addStudent()">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Save Student
 
 </button>
 
-</form>
+</div>
 
 </div>
 
