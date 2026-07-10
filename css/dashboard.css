@@ -276,3 +276,56 @@ gap:15px;
     height:350px !important;
 
 }
+
+/* Attendance */
+
+select{
+
+padding:10px;
+
+border:none;
+
+border-radius:8px;
+
+background:#2563eb;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+select:focus{
+
+outline:none;
+
+}
+
+#attendanceTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+#attendanceTable th{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+#attendanceTable th,
+#attendanceTable td{
+
+padding:15px;
+
+text-align:center;
+
+border-bottom:1px solid #ddd;
+
+}
