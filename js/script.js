@@ -193,3 +193,67 @@ function clearAllStudents() {
     }
 
 }
+
+// ==============================
+// Display Students in Table
+// ==============================
+
+function displayStudents() {
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    let table = document.getElementById("studentBody");
+
+    if (!table) return;
+
+    table.innerHTML = "";
+
+    students.forEach(function(student, index) {
+
+        table.innerHTML += `
+
+        <tr>
+
+            <td>${student.name}</td>
+
+            <td>${student.roll}</td>
+
+            <td>${student.course}</td>
+
+            <td>${student.email}</td>
+
+            <td>${student.phone}</td>
+
+            <td>${student.gender}</td>
+
+            <td>
+
+<button onclick="viewStudent(${index})">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button onclick="editStudent(${index})">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button onclick="deleteStudent(${index})">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+            </td>
+
+        </tr>
+
+        `;
+
+    });
+
+}
+
+displayStudents();
