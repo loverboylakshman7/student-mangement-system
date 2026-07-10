@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>View Students</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<span>StudentMS</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="add_student.html">Add Student</a></li>
+
+<li><a href="view_students.html" class="active">Students</a></li>
+
+<li><a href="reports.html">Reports</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div style="height:100px;"></div>
+
+<div class="container">
+
+<h1>Student Records</h1>
+
+<p>Search, edit and manage all students.</p>
+
+<input
+type="text"
+id="search"
+placeholder="Search by Name..."
+onkeyup="searchStudent()">
+
+<br><br>
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Roll No</th>
+
+<th>Course</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Gender</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
