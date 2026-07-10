@@ -1,17 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Reports</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<h1>Report Page</h1>
+<div class="sidebar">
+
+<h2>🎓 StudentMS</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="settings.html">Settings</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Reports</h1>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="studentCount">0</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h2 id="presentCount">0</h2>
+
+<p>Present</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-xmark"></i>
+
+<h2 id="absentCount">0</h2>
+
+<p>Absent</p>
+
+</div>
+
+</div>
+
+<div class="recent">
+
+<h2>Generate Reports</h2>
+
+<button onclick="exportCSV()">Export CSV</button>
+
+<button onclick="printReport()">Print Report</button>
+
+</div>
+
+</div>
+
+<script src="js/reports.js"></script>
 
 </body>
 
