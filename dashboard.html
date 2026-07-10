@@ -1,121 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
+<title>Dashboard | Student Management System</title>
+
 <link rel="stylesheet" href="css/dashboard.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="sidebar">
 
-<div class="dashboard-header">
+<h2>🎓 StudentMS</h2>
 
-<div class="dashboard-icon">
-<i class="fa-solid fa-chart-simple"></i>
-</div>
+<ul>
 
-<h1>Student Dashboard</h1>
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
 
-<p class="subtitle">
-Manage all student records from one place.
-</p>
+<li><a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
 
-</div>
+<li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
 
-<div class="action-bar">
+<li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
 
-<input
-type="text"
-id="search"
-placeholder="🔍 Search Student..."
-onkeyup="searchStudent()">
+<li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
 
-<button onclick="Auth.logout()">
-    <i class="fa-solid fa-right-from-bracket"></i>
-    Logout
-</button>
+<li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
 
-<button onclick="exportStudents()">
-<i class="fa-solid fa-file-excel"></i>
-Export
-</button>
-
-<button onclick="clearAllStudents()">
-<i class="fa-solid fa-trash"></i>
-Clear
-</button>
-
-<a href="add_student.html">
-
-<button>
-
-<i class="fa-solid fa-user-plus"></i>
-
-Add Student
-
-</button>
-
-</a>
+</ul>
 
 </div>
 
-<div class="table-card">
+<div class="main">
 
-<table id="studentTable">
+<header>
 
-<thead>
+<h1>Dashboard</h1>
+
+<div class="admin">
+
+<i class="fa-solid fa-user-circle"></i>
+
+<span>Administrator</span>
+
+</div>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="totalStudents">0</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-book"></i>
+
+<h2>12</h2>
+
+<p>Courses</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h2>95%</h2>
+
+<p>Attendance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>24</h2>
+
+<p>Reports</p>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="recent">
+
+<h2>Recent Activities</h2>
+
+<table>
 
 <tr>
 
-<th>
-<i class="fa-solid fa-user"></i>
-Name
-</th>
+<th>Date</th>
 
-<th>
-<i class="fa-solid fa-id-card"></i>
-Roll Number
-</th>
-
-<th>
-<i class="fa-solid fa-book"></i>
-Course
-</th>
-
-<th>
-<i class="fa-solid fa-gear"></i>
-Actions
-</th>
+<th>Activity</th>
 
 </tr>
 
-</thead>
+<tr>
 
-<tbody>
+<td>10 Jul</td>
 
-</tbody>
+<td>Student Added</td>
+
+</tr>
+
+<tr>
+
+<td>10 Jul</td>
+
+<td>Attendance Updated</td>
+
+</tr>
+
+<tr>
+
+<td>09 Jul</td>
+
+<td>Report Exported</td>
+
+</tr>
 
 </table>
 
 </div>
 
+<div class="quick">
+
+<h2>Quick Actions</h2>
+
+<a href="attendance.html">Attendance</a>
+
+<a href="reports.html">Reports</a>
+
+<a href="profile.html">Profile</a>
+
+<a href="settings.html">Settings</a>
+
 </div>
 
-<script src="js/storage.js"></script>
-<script src="js/student.js"></script>
-<script src="js/auth.js"></script>
-<script src="js/script.js"></script>
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
 </body>
 
 </html>
