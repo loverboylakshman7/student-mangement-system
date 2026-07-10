@@ -7,7 +7,10 @@
 
 <title>Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -38,9 +41,9 @@ id="search"
 placeholder="🔍 Search Student..."
 onkeyup="searchStudent()">
 
-<button onclick="Auth.logout()"
-<i class="fa-solid fa-right-from-bracket"></i>
-Logout
+<button onclick="Auth.logout()">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
 </button>
 
 <button onclick="exportStudents()">
@@ -88,6 +91,11 @@ Roll Number
 <th>
 <i class="fa-solid fa-book"></i>
 Course
+</th>
+
+<th>
+<i class="fa-solid fa-gear"></i>
+Actions
 </th>
 
 </tr>
