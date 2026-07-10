@@ -1,0 +1,161 @@
+/* ===========================
+   DASHBOARD PAGE
+=========================== */
+
+.dashboard-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.dashboard-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    color:#fff;
+    background:linear-gradient(135deg,#00c6ff,#6c63ff);
+    box-shadow:0 10px 25px rgba(0,198,255,.4);
+}
+
+.subtitle{
+    color:#d7d7d7;
+    font-size:17px;
+    margin-top:10px;
+}
+
+.action-bar{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:35px 0;
+    justify-content:center;
+}
+
+.action-bar input{
+    flex:1;
+    min-width:250px;
+    padding:14px 18px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:15px;
+    outline:none;
+}
+
+.action-bar input::placeholder{
+    color:#ddd;
+}
+
+.action-bar button{
+    padding:14px 22px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    color:white;
+    transition:.3s;
+}
+
+.action-bar button:hover{
+    transform:translateY(-3px);
+}
+
+.logout-btn{
+    background:#ff4d6d;
+}
+
+.export-btn{
+    background:#00b894;
+}
+
+.clear-btn{
+    background:#e17055;
+}
+
+.add-btn{
+    background:#0984e3;
+}
+
+.table-container{
+    overflow-x:auto;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+thead{
+    background:linear-gradient(90deg,#00c6ff,#6c63ff);
+}
+
+thead th{
+    padding:18px;
+    color:white;
+    font-size:16px;
+}
+
+tbody tr{
+    background:rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+tbody tr:nth-child(even){
+    background:rgba(255,255,255,.12);
+}
+
+tbody tr:hover{
+    background:rgba(255,255,255,.2);
+}
+
+tbody td{
+    padding:18px;
+    color:white;
+    text-align:center;
+}
+
+.view-btn{
+    background:#00b894;
+}
+
+.edit-btn{
+    background:#0984e3;
+}
+
+.delete-btn{
+    background:#ff4757;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+    border:none;
+    color:white;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:3px;
+    transition:.3s;
+}
+
+.view-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover{
+    transform:scale(1.08);
+}
+
+.dashboard-footer{
+    margin-top:35px;
+    text-align:center;
+    color:#ccc;
+    font-size:14px;
+}
