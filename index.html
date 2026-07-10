@@ -3,74 +3,945 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Management System</title>
+    <title>Student Management System</title>
 
-<link rel="stylesheet" href="style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Animated Background -->
 
-<div class="hero">
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
 
-<div class="hero-icon">
-<i class="fa-solid fa-graduation-cap"></i>
-</div>
+    <!-- Navigation -->
 
-<h1>Student Management System</h1>
+    <header>
 
-<p class="subtitle">
-Modern • Secure • Fast
-</p>
+        <nav class="navbar">
 
-<p class="description">
-Manage student records with a beautiful dashboard.
-Add students, view profiles, search records and organize everything from one place.
-</p>
+            <div class="logo">
 
-<div class="stats">
+                <i class="fa-solid fa-graduation-cap"></i>
 
-<div class="card">
-<h2><i class="fa-solid fa-user-plus"></i></h2>
-<p>Add Students</p>
-</div>
+                <span>StudentMS</span>
 
-<div class="card">
-<h2><i class="fa-solid fa-magnifying-glass"></i></h2>
-<p>Search</p>
-</div>
+            </div>
 
-<div class="card">
-<h2><i class="fa-solid fa-chart-line"></i></h2>
-<p>Analytics</p>
-</div>
+            <ul class="nav-links">
 
-</div>
+                <li><a href="#" class="active">Home</a></li>
 
-<a href="login.html">
+                <li><a href="#features">Features</a></li>
 
-<button class="start-btn">
+                <li><a href="#about">About</a></li>
 
-<i class="fa-solid fa-rocket"></i>
+                <li><a href="#team">Team</a></li>
 
-Get Started
+            </ul>
 
-</button>
+            <a href="login.html" class="login-btn">
 
-</a>
+                <i class="fa-solid fa-right-to-bracket"></i>
 
-</div>
+                Login
 
-</div>
+            </a>
 
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <div class="badge">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                College Project 2026
+
+            </div>
+
+            <h1>
+
+                Student
+
+                <span>Management</span>
+
+                System
+
+            </h1>
+
+            <p>
+
+                A modern student management platform designed to organize
+                student records, improve productivity, simplify administration,
+                and provide an attractive user experience.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="login.html" class="primary-btn">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    Get Started
+
+                </a>
+
+                <a href="#features" class="secondary-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="hero-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h2>Student Portal</h2>
+
+                <p>
+
+                    Manage students quickly with a beautiful interface.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-title">
+
+            <h2>Our Features</h2>
+
+            <p>
+                Everything required to efficiently manage student information in one place.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <h3>Add Students</h3>
+
+                <p>
+                    Register new students with an easy-to-use interface and organized data entry.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+
+                <h3>Edit Records</h3>
+
+                <p>
+                    Update student information quickly while maintaining organized records.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>Quick Search</h3>
+
+                <p>
+                    Find student records instantly using smart searching and filtering.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-file-export"></i>
+                </div>
+
+                <h3>Export Reports</h3>
+
+                <p>
+                    Export student information for reporting and documentation.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Secure Login</h3>
+
+                <p>
+                    Protected login system for administrators and authorized users.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Dashboard</h3>
+
+                <p>
+                    View important information using a clean and modern dashboard.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="statistics">
+
+        <div class="stat-box">
+
+            <h2>500+</h2>
+
+            <p>Students</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>20+</h2>
+
+            <p>Courses</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>98%</h2>
+
+            <p>Accuracy</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>24/7</h2>
+
+            <p>Availability</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-left">
+
+            <img src="assets/images/student.png"
+                 alt="Student Illustration">
+
+        </div>
+
+        <div class="about-right">
+
+            <h2>
+
+                Why Choose
+
+                <span>Our System?</span>
+
+            </h2>
+
+            <p>
+
+                This Student Management System is developed as a professional
+                college project with a focus on simplicity, performance,
+                modern design and user-friendly navigation.
+
+            </p>
+
+            <div class="about-list">
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Modern Dashboard
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Responsive Design
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Secure Login
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Easy Navigation
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Fast Performance
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Professional Interface
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+        <!-- ================= TECHNOLOGY ================= -->
+
+    <section class="technology">
+
+        <div class="section-title">
+
+            <h2>Technology Stack</h2>
+
+            <p>
+                Built using modern web technologies for performance,
+                simplicity and maintainability.
+            </p>
+
+        </div>
+
+        <div class="technology-grid">
+
+            <div class="tech-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>HTML5</h3>
+
+                <p>
+                    Semantic webpage structure.
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h3>CSS3</h3>
+
+                <p>
+                    Responsive layouts and modern design.
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <i class="fa-brands fa-js"></i>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Interactive features and user experience.
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>Local Storage</h3>
+
+                <p>
+                    Store student records in the browser.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TEAM ================= -->
+
+    <section class="team" id="team">
+
+        <div class="section-title">
+
+            <h2>Development Team</h2>
+
+            <p>
+                Student Management System Project
+            </p>
+
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+
+                <div class="member-image">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <h3>Member 1</h3>
+
+                <h4>Frontend Developer</h4>
+
+                <p>
+
+                    Landing Page<br>
+
+                    Login UI<br>
+
+                    Dashboard UI<br>
+
+                    CSS Design<br>
+
+                    Responsive Design
+
+                </p>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="member-image">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <h3>Member 2</h3>
+
+                <h4>JavaScript Developer</h4>
+
+                <p>
+
+                    Student CRUD<br>
+
+                    Search<br>
+
+                    Validation<br>
+
+                    Export<br>
+
+                    Local Storage
+
+                </p>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="member-image">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <h3>Member 3</h3>
+
+                <h4>Dashboard Developer</h4>
+
+                <p>
+
+                    Dashboard<br>
+
+                    Reports<br>
+
+                    Charts<br>
+
+                    Attendance<br>
+
+                    Notifications
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECT INFO ================= -->
+
+    <section class="project-info">
+
+        <div class="project-card">
+
+            <div>
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>Clean Code</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>Responsive</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h3>Modular Design</h3>
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>College Project</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+        <!-- ================= FAQ ================= -->
+
+    <section class="faq">
+
+        <div class="section-title">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Common questions about the Student Management System.
+            </p>
+
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-card">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <div>
+
+                    <h3>What is this project?</h3>
+
+                    <p>
+                        A Student Management System developed as a college project
+                        using HTML, CSS and JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-card">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <div>
+
+                    <h3>Can student records be managed?</h3>
+
+                    <p>
+                        Yes. Users can add, edit, view, search and delete
+                        student records through the dashboard.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-card">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <div>
+
+                    <h3>Is the system responsive?</h3>
+
+                    <p>
+                        Yes. The interface is designed to work on desktop,
+                        laptop, tablet and mobile devices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Information</h2>
+
+            <p>
+                Student Management System Development Team
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>College</h3>
+
+                <p>Your College Name</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <p>studentproject@college.edu</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Support</h3>
+
+                <p>+91 XXXXX XXXXX</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="cta">
+
+        <div class="cta-content">
+
+            <h2>
+
+                Ready to Manage Students?
+
+            </h2>
+
+            <p>
+
+                Access the dashboard and start managing student
+                records efficiently.
+
+            </p>
+
+            <a href="login.html" class="primary-btn">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                Go to Login
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h2>
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    StudentMS
+
+                </h2>
+
+                <p>
+
+                    Professional Student Management System developed
+                    for academic purposes.
+
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#features">Features</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#team">Team</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Modules</h3>
+
+                <ul>
+
+                    <li>Student Management</li>
+
+                    <li>Reports</li>
+
+                    <li>Attendance</li>
+
+                    <li>Dashboard</li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Student Management System | College Project | All Rights Reserved
+
+        </div>
+
+    </footer>
+
+        <!-- ================= SCROLL TO TOP ================= -->
+
+    <button class="scroll-top" id="scrollTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- ================= LOADING SCREEN ================= -->
+
+    <div class="loader-wrapper">
+
+        <div class="loader">
+
+            <div class="loader-circle"></div>
+
+            <div class="loader-circle"></div>
+
+            <div class="loader-circle"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= DECORATIVE SHAPES ================= -->
+
+    <div class="shape shape-1"></div>
+
+    <div class="shape shape-2"></div>
+
+    <div class="shape shape-3"></div>
+
+    <div class="shape shape-4"></div>
+
+    <!-- ================= FLOATING ICONS ================= -->
+
+    <div class="floating-icons">
+
+        <i class="fa-solid fa-book floating-icon"></i>
+
+        <i class="fa-solid fa-graduation-cap floating-icon"></i>
+
+        <i class="fa-solid fa-user-graduate floating-icon"></i>
+
+        <i class="fa-solid fa-school floating-icon"></i>
+
+        <i class="fa-solid fa-award floating-icon"></i>
+
+    </div>
+
+    <!-- ================= PAGE OVERLAY ================= -->
+
+    <div class="page-overlay"></div>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Loader
+
+        window.addEventListener("load", function () {
+
+            const loader = document.querySelector(".loader-wrapper");
+
+            if (loader) {
+
+                loader.style.opacity = "0";
+
+                setTimeout(() => {
+
+                    loader.style.display = "none";
+
+                }, 600);
+
+            }
+
+        });
+
+        // Scroll Button
+
+        const scrollBtn = document.getElementById("scrollTop");
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 300) {
+
+                scrollBtn.classList.add("show");
+
+            } else {
+
+                scrollBtn.classList.remove("show");
+
+            }
+
+        });
+
+        scrollBtn.addEventListener("click", function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>

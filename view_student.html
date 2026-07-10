@@ -7,56 +7,98 @@
 
     <title>Student Profile</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<div class="container">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>StudentMS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="add_student.html">Add Student</a></li>
+                <li><a href="view_student.html" class="active">Profile</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </a>
+        </nav>
+    </header>
 
-    <div class="profile-card">
+    <div style="height:110px;"></div>
 
-        <div class="profile-image">
-            <i class="fa-solid fa-user-graduate"></i>
+    <div class="container">
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <h1>Student Profile</h1>
+
+            <p class="subtitle">Details for the selected student. Use the actions to edit or remove records.</p>
+
+            <div class="info-box">
+
+                <div class="info">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Name</span>
+                    <strong id="studentName">—</strong>
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Roll Number</span>
+                    <strong id="studentRoll">—</strong>
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Course</span>
+                    <strong id="studentCourse">—</strong>
+                </div>
+
+            </div>
+
+            <div class="action-bar" style="margin-top:18px;">
+                <button onclick="window.location.href='dashboard.html'" class="secondary-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </button>
+
+                <button id="editBtn" class="primary-btn" style="min-width:140px;">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Edit
+                </button>
+
+                <button id="deleteBtn" class="secondary-btn" style="min-width:140px; background:rgba(255,80,80,0.12); border-color:rgba(255,80,80,0.18);">
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+                </button>
+            </div>
+
         </div>
-
-        <h1>Student Profile</h1>
-
-        <div class="info-box">
-
-            <div class="info">
-                <i class="fa-solid fa-user"></i>
-                <span>Name</span>
-                <strong id="studentName"></strong>
-            </div>
-
-            <div class="info">
-                <i class="fa-solid fa-id-card"></i>
-                <span>Roll Number</span>
-                <strong id="studentRoll"></strong>
-            </div>
-
-            <div class="info">
-                <i class="fa-solid fa-book"></i>
-                <span>Course</span>
-                <strong id="studentCourse"></strong>
-            </div>
-
-        </div>
-
-        <button onclick="window.location.href='dashboard.html'">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Dashboard
-        </button>
 
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
