@@ -1,4 +1,3 @@
-   students.push(student); 
 function login() {
 
     const username = document.getElementById("username")?.value.trim();
@@ -446,16 +445,30 @@ function getTotalStudents(){
 // UPDATE DASHBOARD CARD
 // ======================================
 
+
 function updateDashboard(){
 
-    let card =
-    document.getElementById("totalStudents");
+    let students = JSON.parse(localStorage.getItem("students")) || [];
 
-    if(card){
+    let total = students.length;
 
-        card.innerText = getTotalStudents();
+    let male = students.filter(s => s.gender === "Male").length;
 
-    }
+    let female = students.filter(s => s.gender === "Female").length;
+
+    let courses = [...new Set(students.map(s => s.course))];
+
+    if(document.getElementById("totalStudents"))
+        document.getElementById("totalStudents").innerText = total;
+
+    if(document.getElementById("maleStudents"))
+        document.getElementById("maleStudents").innerText = male;
+
+    if(document.getElementById("femaleStudents"))
+        document.getElementById("femaleStudents").innerText = female;
+
+    if(document.getElementById("courseCount"))
+        document.getElementById("courseCount").innerText = courses.length;
 
 }
 
