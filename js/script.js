@@ -1,28 +1,5 @@
-function addStudent() {
-    let name = document.getElementById("name").value;
-    let roll = document.getElementById("roll").value;
-    let course = document.getElementById("course").value;
-   let students = StudentManager.getAllStudents();
-let editIndex = localStorage.getItem("editIndex");
+   students.push(student); 
 
-if (editIndex !== null) {
-
-    students[editIndex] = {
-        name: name,
-        roll: roll,
-        course: course
-    };
-StudentManager.saveAllStudents(students);
-
-    localStorage.removeItem("editIndex");
-    localStorage.removeItem("editStudent");
-
-    alert("Student Updated Successfully!");
-
-    window.location.href = "dashboard.html";
-
-    return;
-}
 
     if (name === "" || roll === "" || course === "") {
         alert("Please fill all fields.");
