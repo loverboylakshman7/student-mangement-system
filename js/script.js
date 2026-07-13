@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+// =============================================
+// STUDENT MANAGEMENT SYSTEM
+// Version 2.0
+// =============================================
+
+// ----------------------
+// LOGIN
+// ----------------------
+>>>>>>> 7b2379ffb97fba852d76c3c81db2bd234ea1650e
 function login() {
 
     const username = document.getElementById("username")?.value.trim();
