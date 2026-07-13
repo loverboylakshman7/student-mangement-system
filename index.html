@@ -2,25 +2,33 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
------
+
     <title>Student Management System</title>
 
-    <!-- Main CSS -->
+    <meta name="description"
+        content="Modern Student Management System developed for Diploma Major Project.">
+
+    <meta name="keywords"
+        content="Student Management System, HTML, CSS, JavaScript">
+
+    <meta name="author"
+        content="Project Team">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -28,411 +36,300 @@
 
 <body>
 
-    <!-- Animated Background -->
+<div class="loader-wrapper">
 
-    <div class="bg-circle circle1"></div>
-    <div class="bg-circle circle2"></div>
-    <div class="bg-circle circle3"></div>
+    <div class="loader"></div>
 
-    <!-- Navigation -->
+</div>
 
-    <header>
+<header>
 
-        <nav class="navbar">
+<nav class="navbar">
 
-            <div class="logo">
+<div class="logo">
 
-                <i class="fa-solid fa-graduation-cap"></i>
+<i class="fa-solid fa-graduation-cap"></i>
 
-                <span>StudentMS</span>
+<span>StudentMS</span>
 
-            </div>
+</div>
 
-            <ul class="nav-links">
+<ul class="nav-links">
 
-                <li><a href="#" class="active">Home</a></li>
+<li><a href="#" class="active">Home</a></li>
 
-            </ul>
+<li><a href="#features">Features</a></li>
 
-            <a href="login.html" class="login-btn">
+<li><a href="#about">About</a></li>
 
-                <i class="fa-solid fa-right-to-bracket"></i>
+<li><a href="#team">Team</a></li>
 
-                Login
+<li><a href="#contact">Contact</a></li>
 
-            </a>
+</ul>
 
-        </nav>
+<a href="login.html" class="login-btn">
 
-    </header>
+<i class="fa-solid fa-right-to-bracket"></i>
 
-    <!-- Hero -->
+Login
 
-    
+</a>
 
-<!-- ================= HERO ================= -->
+</nav>
+
+</header>
 
 <section class="hero">
 
-    <div class="hero-left">
+<div class="hero-left">
 
-        <span class="badge">
-            <i class="fa-solid fa-graduation-cap"></i>
-            College Project 2026
-        </span>
+<span class="badge">
 
-        <h1>
-            Student <span>Management</span><br>
-            System
-        </h1>
+<i class="fa-solid fa-award"></i>
 
-        <p>
-            Manage students, attendance, courses and reports with a modern,
-            secure and user-friendly platform designed for educational
-            institutions.
-        </p>
+Diploma Major Project 2026
 
-        <div class="hero-buttons">
+</span>
 
-            <a href="login.html" class="primary-btn">
-                <i class="fa-solid fa-right-to-bracket"></i>
-                Login
-            </a>
+<h1>
 
-            <a href="#features" class="secondary-btn">
-                <i class="fa-solid fa-circle-info"></i>
-                Explore
-            </a>
+Student
 
-        </div>
+<span>Management</span>
 
-    </div>
+System
 
-    <div class="hero-right">
+</h1>
 
-        <div class="hero-card">
+<p>
 
-            <i class="fa-solid fa-chart-line"></i>
+A modern web-based Student Management System developed using HTML, CSS and JavaScript.
 
-            <h2>Dashboard</h2>
+Manage students, attendance, reports and courses with a professional interface.
 
-            <p>Track students, attendance, reports and academic performance in one place.</p>
+</p>
 
-            <div class="stats">
+<div class="hero-buttons">
 
-                <div>
-                    <h3>1500+</h3>
-                    <p>Students</p>
-                </div>
+<a href="login.html" class="primary-btn">
 
-                <div>
-                    <h3>50+</h3>
-                    <p>Teachers</p>
-                </div>
+Login
 
-                <div>
-                    <h3>20+</h3>
-                    <p>Courses</p>
-                </div>
+</a>
 
-            </div>
+<a href="#features" class="secondary-btn">
 
-        </div>
+Explore
 
-    </div>
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>Dashboard Overview</h2>
+
+<div class="stats">
+
+<div>
+
+<h3>250+</h3>
+
+<p>Students</p>
+
+</div>
+
+<div>
+
+<h3>15+</h3>
+
+<p>Faculty</p>
+
+</div>
+
+<div>
+
+<h3>6</h3>
+
+<p>Departments</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-
-<!-- ================= FEATURES ================= -->
 
 <section id="features" class="features">
 
-    <h2 class="section-title">Our Features</h2>
+<h2 class="section-title">
 
-    <p class="section-subtitle">
-        Everything you need to manage students efficiently.
-    </p>
+Features
 
-    <div class="feature-grid">
+</h2>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-user-graduate"></i>
-            <h3>Student Management</h3>
-            <p>Add, edit, delete and organize student records easily.</p>
-        </div>
+<div class="feature-grid">
 
-        <div class="feature-card">
-            <i class="fa-solid fa-calendar-check"></i>
-            <h3>Attendance</h3>
-            <p>Track daily attendance with a simple interface.</p>
-        </div>
+<div class="feature-card">
 
-        <div class="feature-card">
-            <i class="fa-solid fa-book"></i>
-            <h3>Courses</h3>
-            <p>Manage departments, subjects and course details.</p>
-        </div>
+<i class="fa-solid fa-user-graduate"></i>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-chart-column"></i>
-            <h3>Reports</h3>
-            <p>Generate detailed reports instantly.</p>
-        </div>
+<h3>Student Records</h3>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <h3>Search</h3>
-            <p>Find any student within seconds.</p>
-        </div>
+<p>Add, edit and delete student information.</p>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-file-export"></i>
-            <h3>Export</h3>
-            <p>Export student data whenever required.</p>
-        </div>
+</div>
 
-    </div>
+<div class="feature-card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h3>Attendance</h3>
+
+<p>Manage attendance with one click.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-book"></i>
+
+<h3>Courses</h3>
+
+<p>Organize departments and subjects.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>Reports</h3>
+
+<p>Generate academic reports instantly.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<h3>Search</h3>
+
+<p>Find students quickly.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-download"></i>
+
+<h3>Export</h3>
+
+<p>Export records securely.</p>
+
+</div>
+
+</div>
 
 </section>
-        <!-- ================= FEATURES ================= -->
+
 <section id="about" class="about">
 
-    <h2 class="section-title">About Project</h2>
+<h2 class="section-title">
 
-    <p>
-        Student Management System is a web application developed as a diploma
-        college project. It simplifies student record management through an
-        attractive interface and secure data handling.
-    </p>
+About Project
+
+</h2>
+
+<p>
+
+This Student Management System is a Diploma Major Project developed using HTML, CSS and JavaScript. It provides a modern interface for managing student information efficiently.
+
+</p>
 
 </section>
-      <footer>
-        <div class="footer-container">
 
-            <div class="footer-column">
-
-                <h2>
-
-                    <i class="fa-solid fa-graduation-cap"></i>
-
-                    StudentMS
-
-                </h2>
-
-                <p>
-
-                    Professional Student Management System developed
-                    for academic purposes.
-
-                </p>
-
-            </div>
-
-            <div class="footer-column">
-
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="#">Home</a></li>
-
-                    <section id="features">
-    ...
-</section>
-
-<section id="about">
-    ...
-</section>
-
-<section id="team">
-    ...
-</section>
 <section id="team" class="team">
 
-    <h2 class="section-title">Project Team</h2>
+<h2 class="section-title">
 
-    <div class="team-grid">
+Project Team
 
-        <div class="team-card">
-            <i class="fa-solid fa-user"></i>
-            <h3>Member 1</h3>
-            <p>Frontend Developer</p>
-        </div>
+</h2>
 
-        <div class="team-card">
-            <i class="fa-solid fa-user"></i>
-            <h3>Member 2</h3>
-            <p>Backend Developer</p>
-        </div>
+<div class="team-grid">
 
-        <div class="team-card">
-            <i class="fa-solid fa-user"></i>
-            <h3>Member 3</h3>
-            <p>UI / Integration</p>
-        </div>
+<div class="team-card">
 
-    </div>
+<i class="fa-solid fa-user"></i>
+
+<h3>Member 1</h3>
+
+<p>Frontend Developer</p>
+
+</div>
+
+<div class="team-card">
+
+<i class="fa-solid fa-user"></i>
+
+<h3>Member 2</h3>
+
+<p>Backend Developer</p>
+
+</div>
+
+<div class="team-card">
+
+<i class="fa-solid fa-user"></i>
+
+<h3>Member 3</h3>
+
+<p>UI & Integration</p>
+
+</div>
+
+</div>
 
 </section>
-                </ul>
 
-            </div>
+<footer id="contact">
 
-            <div class="footer-column">
+<h2>Student Management System</h2>
 
-                <h3>Modules</h3>
+<p>
 
-                <ul>
+Designed for Diploma Major Project
 
-                    <li>Student Management</li>
+</p>
 
-                    <li>Reports</li>
+<p>
 
-                    <li>Attendance</li>
+© 2026 All Rights Reserved
 
-                    <li>Dashboard</li>
+</p>
 
-                </ul>
+</footer>
 
-            </div>
+<button id="scrollTop">
 
-            <div class="footer-column">
+<i class="fa-solid fa-arrow-up"></i>
 
-                <h3>Follow Us</h3>
+</button>
 
-                <div class="social-icons">
+<script src="js/main.js"></script>
 
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="copyright">
-
-            © 2026 Student Management System | College Project | All Rights Reserved
-
-        </div>
-
-    </footer>
-
-        <!-- ================= SCROLL TO TOP ================= -->
-
-    <button class="scroll-top" id="scrollTop">
-
-        <i class="fa-solid fa-arrow-up"></i>
-
-    </button>
-
-    <!-- ================= LOADING SCREEN ================= -->
-
-    <div class="loader-wrapper">
-
-        <div class="loader">
-
-            <div class="loader-circle"></div>
-
-            <div class="loader-circle"></div>
-
-            <div class="loader-circle"></div>
-
-        </div>
-
-    </div>
-
-    <!-- ================= DECORATIVE SHAPES ================= -->
-
-    <div class="shape shape-1"></div>
-
-    <div class="shape shape-2"></div>
-
-    <div class="shape shape-3"></div>
-
-    <div class="shape shape-4"></div>
-
-    <!-- ================= FLOATING ICONS ================= -->
-
-    <div class="floating-icons">
-
-        <i class="fa-solid fa-book floating-icon"></i>
-
-        <i class="fa-solid fa-graduation-cap floating-icon"></i>
-
-        <i class="fa-solid fa-user-graduate floating-icon"></i>
-
-        <i class="fa-solid fa-school floating-icon"></i>
-
-        <i class="fa-solid fa-award floating-icon"></i>
-
-    </div>
-
-    <!-- ================= PAGE OVERLAY ================= -->
-
-    <div class="page-overlay"></div>
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script>
-
-        // Loader
-
-        window.addEventListener("load", function () {
-
-            const loader = document.querySelector(".loader-wrapper");
-
-            if (loader) {
-
-                loader.style.opacity = "0";
-
-                setTimeout(() => {
-
-                    loader.style.display = "none";
-
-                }, 600);
-
-            }
-
-        });
-
-        // Scroll Button
-
-        const scrollBtn = document.getElementById("scrollTop");
-
-        window.addEventListener("scroll", function () {
-
-            if (window.scrollY > 300) {
-
-                scrollBtn.classList.add("show");
-
-            } else {
-
-                scrollBtn.classList.remove("show");
-
-            }
-
-        });
-
-        scrollBtn.addEventListener("click", function () {
-
-            window.scrollTo({
-
-                top: 0,
-
-                behavior: "smooth"
-
-            });
-
-        });
-
-    </script>
 </body>
 
 </html>
