@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
-// =============================================
-// STUDENT MANAGEMENT SYSTEM
-// Version 2.0
-// =============================================
-
 // ----------------------
 // LOGIN
 // ----------------------
->>>>>>> 7b2379ffb97fba852d76c3c81db2bd234ea1650e
+
 function login() {
 
     const username = document.getElementById("username")?.value.trim();
@@ -25,9 +18,48 @@ function login() {
         alert("Invalid Username or Password");
 
     }
-
 }
 
+
+// ----------------------
+// ENTER KEY NAVIGATION
+// ----------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    if (username && password) {
+
+        username.addEventListener("keydown", function (event) {
+
+            if (event.key === "Enter") {
+
+                event.preventDefault();
+
+                password.focus();
+
+            }
+
+        });
+
+
+        password.addEventListener("keydown", function (event) {
+
+            if (event.key === "Enter") {
+
+                event.preventDefault();
+
+                login();
+
+            }
+
+        });
+
+    }
+
+});;
 // ----------------------
 // ADD / UPDATE STUDENT
 // ----------------------
