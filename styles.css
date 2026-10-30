@@ -830,3 +830,208 @@ input, select, textarea {
     }
 }
 
+
+/* ==========================================
+   CAMPUSFLOW FINAL - FOREST GLASS DESIGN
+   ========================================== */
+
+:root {
+  --cf-bg: #10251F;
+  --cf-forest: #183D32;
+  --cf-deep: #102B25;
+  --cf-leaf: #527C63;
+  --cf-sage: #A3B899;
+  --cf-cream: #F2F0E6;
+  --cf-text: #F2F0E6;
+  --cf-muted: #BDCEBD;
+  --cf-glass: rgba(31,66,51,.55);
+  --cf-border: rgba(190,220,181,.23);
+}
+
+/* Ambient background */
+body {
+  background:
+    radial-gradient(ellipse at 12% 12%,rgba(82,124,99,.23),transparent 40%),
+    radial-gradient(ellipse at 90% 85%,rgba(113,135,90,.17),transparent 40%),
+    linear-gradient(135deg,#0c2019,#142d23 55%,#0b211c) !important;
+  background-attachment: fixed !important;
+  color: var(--cf-text) !important;
+}
+
+/* Glass sidebar */
+.sidebar {
+  background: rgba(15,39,29,.84) !important;
+  backdrop-filter: blur(24px) saturate(150%) !important;
+  border-right: 1px solid var(--cf-border) !important;
+}
+
+/* Glass header */
+.topbar {
+  background: rgba(242,240,230,.88) !important;
+  backdrop-filter: blur(22px) !important;
+  border-bottom: 1px solid rgba(82,124,99,.22) !important;
+}
+
+/* Glass cards */
+.panel, .stat-card {
+  background: linear-gradient(
+    145deg,
+    rgba(67,105,76,.38),
+    rgba(20,49,37,.72)
+  ) !important;
+  border: 1px solid var(--cf-border) !important;
+  border-top-color: rgba(255,255,255,.19) !important;
+  border-radius: 17px !important;
+  backdrop-filter: blur(22px) saturate(150%) !important;
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.09) !important;
+  transition: transform .35s ease, box-shadow .35s ease,
+              border-color .35s ease !important;
+}
+
+.panel:hover, .stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(190,220,181,.48) !important;
+  box-shadow: 0 22px 45px rgba(0,0,0,.28),
+              0 0 22px rgba(113,150,110,.13) !important;
+}
+
+/* Typography */
+.panel-heading h2,
+.stat-card strong,
+.page-heading h1 {
+  color: var(--cf-cream) !important;
+  -webkit-text-fill-color: var(--cf-cream) !important;
+}
+
+.panel-heading p,
+.stat-card small,
+.muted,
+.helper {
+  color: var(--cf-muted) !important;
+}
+
+/* Navigation */
+.nav-link {
+  color: #C7D8C7 !important;
+  border-radius: 10px !important;
+  transition: background .25s ease, transform .25s ease !important;
+}
+
+.nav-link:hover {
+  background: rgba(163,184,153,.12) !important;
+  transform: translateX(3px);
+}
+
+.nav-link.active {
+  background: rgba(132,173,125,.22) !important;
+  border: 1px solid rgba(190,220,181,.22) !important;
+  box-shadow: inset 3px 0 #B5D0A6 !important;
+  color: #FFFFFF !important;
+}
+
+/* Buttons */
+.primary-button {
+  background: linear-gradient(135deg,#6D9875,#315B45) !important;
+  border: 1px solid rgba(220,240,210,.28) !important;
+  color: white !important;
+  box-shadow: 0 7px 20px rgba(40,95,57,.25),
+              inset 0 1px 0 rgba(255,255,255,.2) !important;
+}
+
+.primary-button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.secondary-button, .quiet-button {
+  background: rgba(235,241,225,.91) !important;
+  color: #294437 !important;
+  border: 1px solid #BCCBB5 !important;
+}
+
+/* Inputs */
+input, select, textarea {
+  border-radius: 9px !important;
+}
+
+.search-box, .toolbar select,
+.toolbar input[type=date],
+.toolbar input[type=month] {
+  background: #F2F0E6 !important;
+  color: #294437 !important;
+  border-color: #A3B899 !important;
+}
+
+.search-box input {
+  background: transparent !important;
+  color: #294437 !important;
+}
+
+/* Table */
+th {
+  color: #C0D2BD !important;
+  border-color: rgba(190,220,181,.16) !important;
+}
+
+td, .student-cell b {
+  color: #F2F0E6 !important;
+}
+
+tbody tr {
+  background: rgba(255,255,255,.025) !important;
+  transition: background .25s ease !important;
+}
+
+tbody tr:hover {
+  background: rgba(163,184,153,.12) !important;
+}
+
+/* Attendance ring */
+.attendance-ring {
+  box-shadow: 0 0 0 8px rgba(140,190,145,.08),
+              0 0 30px rgba(25,190,125,.19) !important;
+}
+
+.attendance-ring:before {
+  background: #F2F0E6 !important;
+}
+
+.attendance-ring strong {
+  color: #183D32 !important;
+}
+
+.attendance-ring small {
+  color: #527C63 !important;
+}
+
+/* Dialog */
+dialog {
+  background: #19382B !important;
+  color: #F2F0E6 !important;
+  border: 1px solid var(--cf-border) !important;
+  border-radius: 18px !important;
+}
+
+.dialog-heading h2 {
+  color: #F2F0E6 !important;
+}
+
+/* Responsive and motion safety */
+@media (max-width: 760px) {
+  .sidebar {
+    backdrop-filter: blur(18px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* End CampusFlow final visual layer */
+
