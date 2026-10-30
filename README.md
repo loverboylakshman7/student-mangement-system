@@ -1,6 +1,6 @@
 # CampusFlow — Student ERP
 
-A responsive browser-based Student Management System built with vanilla HTML, CSS and JavaScript.
+A responsive browser-based Student Management System built with vanilla HTML, CSS and JavaScript, with lightweight CSS 3D effects and motion.
 
 ## Features
 - Dashboard with enrolment, attendance and department metrics
@@ -10,6 +10,9 @@ A responsive browser-based Student Management System built with vanilla HTML, CS
 - Monthly attendance summary and department overview
 - Export student and attendance records to CSV
 - Responsive desktop and mobile layout
+- 3D hover tilt on dashboard cards and panels (desktop pointer devices)
+- Animated ambient background, page transitions, chart bars and interactive hover depth
+- Respects the operating system reduced-motion accessibility preference
 - Browser-local persistence using localStorage
 - No build tools or package installation required
 
