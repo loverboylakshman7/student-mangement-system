@@ -465,3 +465,642 @@ width:100%;
 }
 
 }
+/* =========================================
+   CAMPUSFLOW - PREMIUM 3D VISUAL UPGRADE
+   ========================================= */
+
+:root {
+  --cf-primary: #8b5cf6;
+  --cf-secondary: #06b6d4;
+  --cf-accent: #ec4899;
+  --cf-glow: rgba(139,92,246,.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(99,102,241,.15), transparent 40%),
+    radial-gradient(ellipse at 90% 85%, rgba(6,182,212,.12), transparent 40%),
+    #0b1020;
+  perspective: 1200px;
+}
+
+button, a, .card, .panel, .stat-card,
+.dashboard-card, .feature-card {
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s ease,
+    background .35s ease,
+    border-color .35s ease;
+}
+
+/* Rich gradient headings */
+h1, h2 {
+  background: linear-gradient(110deg,#fff,#a5b4fc,#67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glassmorphism panels */
+.card, .panel, .stat-card,
+.dashboard-card, .feature-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,70,.88),
+    rgba(15,23,42,.92)
+  );
+  border: 1px solid rgba(148,163,255,.16);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(16px);
+  transform-style: preserve-3d;
+  animation: cf-appear .65s ease both;
+}
+
+.card:hover, .panel:hover, .stat-card:hover,
+.dashboard-card:hover, .feature-card:hover {
+  transform: translateY(-7px) rotateX(2deg) rotateY(-1deg);
+  border-color: rgba(129,140,248,.55);
+  box-shadow:
+    0 22px 45px rgba(0,0,0,.35),
+    0 0 24px var(--cf-glow);
+}
+
+/* Premium gradient buttons */
+button, .btn, .button, a.button {
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, .btn:hover, .button:hover {
+  transform: translateY(-3px) scale(1.025);
+  box-shadow: 0 10px 28px rgba(99,102,241,.3);
+}
+
+button:active, .btn:active {
+  transform: scale(.97);
+}
+
+/* Animated shine */
+button::after, .btn::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -60%;
+  width: 35%;
+  height: 300%;
+  background: rgba(255,255,255,.12);
+  transform: rotate(25deg);
+  transition: left .6s ease;
+  pointer-events: none;
+}
+
+button:hover::after, .btn:hover::after {
+  left: 130%;
+}
+
+/* Inputs */
+input, select, textarea {
+  transition: .3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #818cf8 !important;
+  box-shadow: 0 0 0 4px rgba(129,140,248,.15),
+              0 0 18px rgba(129,140,248,.12);
+}
+
+/* Navigation effects */
+nav a, nav button, .nav-link {
+  transition: .3s ease;
+}
+
+nav a:hover, nav button:hover, .nav-link:hover {
+  transform: translateX(5px);
+  background: linear-gradient(90deg,rgba(139,92,246,.2),transparent);
+}
+
+/* Table animation */
+tbody tr {
+  animation: cf-row-in .4s ease both;
+  transition: background .25s ease;
+}
+
+tbody tr:hover {
+  background: rgba(99,102,241,.10);
+}
+
+/* Floating ambient light */
+.brand-mark, .logo {
+  box-shadow: 0 0 25px rgba(139,92,246,.4);
+  animation: cf-float 4s ease-in-out infinite;
+}
+
+/* Smooth entrance */
+@keyframes cf-appear {
+  from { opacity: 0; transform: translateY(15px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cf-row-in {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes cf-float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Beautiful scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8b5cf6,#06b6d4);
+  border-radius: 20px;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CAMPUSFLOW - HIGH CONTRAST FIX */
+
+body {
+  color: #edf3ff !important;
+}
+
+.panel, .card, .stat-card,
+.dashboard-card, .feature-card {
+  color: #edf3ff !important;
+}
+
+.panel p, .card p, .stat-card small,
+.panel small, .card small,
+.muted, td, th, label {
+  color: #b7c5dc !important;
+}
+
+.stat-card strong,
+td strong, .student-cell strong {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.stat-card span,
+.panel h2, .card h2 {
+  color: #e6edff !important;
+  opacity: 1 !important;
+}
+
+table tbody tr {
+  background: rgba(255,255,255,.015);
+}
+
+table tbody tr:hover {
+  background: rgba(99,102,241,.13);
+}
+
+.panel, .stat-card, .card {
+  backdrop-filter: blur(12px);
+  border-color: rgba(148,163,255,.22);
+}
+
+
+/* CAMPUSFLOW - FINAL READABILITY POLISH */
+
+tbody td:first-child strong,
+.student-cell strong,
+.student-info strong,
+.student-name {
+    color: #f1f5ff !important;
+    opacity: 1 !important;
+}
+
+.stat-icon {
+    color: #344a8a !important;
+    font-weight: 900;
+}
+
+.stat-icon.green { color: #087d61 !important; }
+.stat-icon.red { color: #b45309 !important; }
+.stat-icon.purple { color: #7046b8 !important; }
+
+.donut-center,
+.donut-center strong,
+.chart-center,
+.chart-center strong,
+.chart-label {
+    color: #17233b !important;
+    font-weight: 800 !important;
+}
+
+.panel, .stat-card {
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* CAMPUSFLOW - ATTENDANCE CONTROL FIX */
+
+/* Attendance dropdowns */
+table select,
+table tbody td select,
+.attendance-select {
+    background: #ffffff !important;
+    color: #17233b !important;
+    -webkit-text-fill-color: #17233b !important;
+    border: 1px solid #cbd5e1 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+table select option,
+.attendance-select option {
+    background: #ffffff !important;
+    color: #17233b !important;
+    -webkit-text-fill-color: #17233b !important;
+}
+
+/* Student initials */
+.student-cell span,
+.student-avatar,
+.student-initial,
+.avatar {
+    color: #3659c9 !important;
+    -webkit-text-fill-color: #3659c9 !important;
+    font-weight: 800 !important;
+}
+
+/* Keep student names readable */
+table tbody td strong {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Keep secondary information readable */
+table tbody td small {
+    color: #bdcbe0 !important;
+    -webkit-text-fill-color: #bdcbe0 !important;
+}
+
+
+/* CAMPUSFLOW - STUDENT ACTION BUTTON FIX */
+
+table .mini-button,
+table button,
+.row-actions button {
+    color: #24365b !important;
+    -webkit-text-fill-color: #24365b !important;
+    background: #edf2ff !important;
+    border: 1px solid #c5d2f5 !important;
+    opacity: 1 !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    padding: 8px 12px !important;
+    min-width: 42px;
+    border-radius: 8px !important;
+}
+
+table .mini-button.delete,
+.row-actions button.delete,
+.row-actions .delete {
+    color: #c24152 !important;
+    -webkit-text-fill-color: #c24152 !important;
+    background: #fff0f1 !important;
+    border-color: #ffc6cc !important;
+}
+
+table .mini-button:hover,
+.row-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99,102,241,.2);
+}
+
+
+/* ==========================================
+   CAMPUSFLOW - NATURE INSPIRED THEME
+   Forest | Sage | Moss | Earth | Cream
+   ========================================== */
+
+:root {
+  --nature-forest: #183D32;
+  --nature-deep: #102B25;
+  --nature-leaf: #527C63;
+  --nature-sage: #A3B899;
+  --nature-moss: #71875A;
+  --nature-earth: #D9C9A3;
+  --nature-cream: #F2F0E6;
+  --nature-text: #F4F5ED;
+}
+
+/* Main background */
+body {
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(82,124,99,.22), transparent 40%),
+    radial-gradient(ellipse at 90% 90%, rgba(113,135,90,.18), transparent 40%),
+    #10251F !important;
+  color: var(--nature-text) !important;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #142F27 !important;
+  border-color: #345443 !important;
+}
+
+.brand-mark {
+  background: linear-gradient(135deg,#72966E,#315E45) !important;
+  box-shadow: 0 0 24px rgba(113,150,110,.3) !important;
+}
+
+.nav-link.active {
+  background: #315443 !important;
+  box-shadow: inset 3px 0 #B1C99D !important;
+  color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+  background: rgba(163,184,153,.16) !important;
+}
+
+/* Top navigation */
+.topbar {
+  background: var(--nature-cream) !important;
+  border-color: #D9DDCD !important;
+  color: #294437 !important;
+}
+
+.breadcrumb,
+.breadcrumb strong,
+.date-label {
+  color: #385847 !important;
+}
+
+/* Main headings */
+h1, h2 {
+  background: linear-gradient(110deg,#F2F0E6,#B5CEA9) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Cards and panels */
+.panel, .card, .stat-card,
+.dashboard-card, .feature-card {
+  background: linear-gradient(145deg,#203D32,#172F29) !important;
+  border: 1px solid rgba(163,184,153,.25) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.22),
+              inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+.panel:hover, .card:hover, .stat-card:hover {
+  border-color: #A3B899 !important;
+  box-shadow: 0 18px 35px rgba(0,0,0,.3),
+              0 0 18px rgba(113,135,90,.2) !important;
+}
+
+/* Buttons */
+.primary-button, .btn-primary {
+  background: linear-gradient(135deg,#527C63,#315B45) !important;
+  color: #FFFFFF !important;
+  border-color: #719779 !important;
+}
+
+.primary-button:hover, .btn-primary:hover {
+  background: linear-gradient(135deg,#6D9875,#426C51) !important;
+}
+
+/* Secondary buttons */
+.secondary-button {
+  background: #E8EBDD !important;
+  color: #294437 !important;
+  border-color: #BCCBB5 !important;
+}
+
+/* Text readability */
+.muted, small, th {
+  color: #B9C9B4 !important;
+}
+
+td, td strong, .student-cell strong {
+  color: #F2F0E6 !important;
+  -webkit-text-fill-color: #F2F0E6 !important;
+}
+
+td small {
+  color: #C1CFBB !important;
+}
+
+/* Inputs */
+input, select, textarea {
+  background: #F2F0E6 !important;
+  color: #294437 !important;
+  border-color: #A3B899 !important;
+}
+
+input::placeholder {
+  color: #718575 !important;
+}
+
+/* Attendance dropdown */
+.attendance-select, table select {
+  background: #F2F0E6 !important;
+  color: #294437 !important;
+  -webkit-text-fill-color: #294437 !important;
+}
+
+/* Table */
+tbody tr {
+  background: rgba(163,184,153,.055) !important;
+}
+
+tbody tr:hover {
+  background: rgba(163,184,153,.15) !important;
+}
+
+/* Edit and delete buttons */
+.row-actions .mini-button,
+table .mini-button {
+  background: #E8EBDD !important;
+  color: #294437 !important;
+  -webkit-text-fill-color: #294437 !important;
+}
+
+.row-actions .delete,
+table .mini-button.delete {
+  background: #F5E6DD !important;
+  color: #994B3D !important;
+  -webkit-text-fill-color: #994B3D !important;
+}
+
+/* Attendance and success indicators */
+.stat-icon.green {
+  background: #DCEBDD !important;
+  color: #28744B !important;
+}
+
+.stat-icon.blue {
+  background: #E1E9D9 !important;
+  color: #426C51 !important;
+}
+
+.stat-icon.purple {
+  background: #E9E8D8 !important;
+  color: #697747 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#527C63,#A3B899) !important;
+}
+
+
+/* ==========================================
+   CAMPUSFLOW - FOREST GLASSMORPHISM
+   ========================================== */
+
+:root {
+  --glass-bg: rgba(31, 66, 51, .48);
+  --glass-border: rgba(190, 220, 181, .22);
+  --glass-highlight: rgba(255,255,255,.13);
+  --glass-glow: rgba(126, 170, 120, .22);
+}
+
+/* Ambient background */
+body {
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(82,124,99,.28), transparent 42%),
+    radial-gradient(ellipse at 85% 80%, rgba(113,135,90,.20), transparent 45%),
+    linear-gradient(135deg,#0c2019,#142d23 55%,#0b211c) !important;
+  background-attachment: fixed !important;
+}
+
+/* Glass panels */
+.panel, .card, .stat-card,
+.dashboard-card, .feature-card {
+  background: linear-gradient(
+    135deg,
+    rgba(75,115,86,.28),
+    rgba(23,52,40,.50)
+  ) !important;
+
+  backdrop-filter: blur(22px) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(145%) !important;
+
+  border: 1px solid var(--glass-border) !important;
+  border-top-color: rgba(255,255,255,.19) !important;
+  border-radius: 16px !important;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.10),
+    inset 0 -1px 0 rgba(0,0,0,.10) !important;
+
+  transition: transform .4s ease, box-shadow .4s ease,
+              border-color .4s ease !important;
+}
+
+/* 3D hover */
+.panel:hover, .card:hover, .stat-card:hover {
+  transform: translateY(-5px) perspective(900px) rotateX(1deg);
+  border-color: rgba(190,220,181,.48) !important;
+  box-shadow:
+    0 22px 48px rgba(0,0,0,.30),
+    0 0 25px var(--glass-glow),
+    inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+/* Glass sidebar */
+.sidebar {
+  background: rgba(15,39,29,.78) !important;
+  backdrop-filter: blur(24px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(140%) !important;
+  border-right: 1px solid var(--glass-border) !important;
+}
+
+/* Glass topbar */
+.topbar {
+  background: rgba(242,240,230,.83) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Glass buttons */
+.primary-button {
+  background: linear-gradient(
+    135deg,
+    rgba(104,157,112,.95),
+    rgba(49,103,69,.92)
+  ) !important;
+  border: 1px solid rgba(220,240,210,.28) !important;
+  box-shadow:
+    0 7px 20px rgba(40,95,57,.25),
+    inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+
+.secondary-button {
+  background: rgba(235,241,225,.88) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Glass navigation */
+.nav-link.active {
+  background: rgba(132,173,125,.22) !important;
+  border: 1px solid rgba(190,220,181,.20) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Glass table rows */
+tbody tr {
+  background: rgba(255,255,255,.035) !important;
+  transition: background .3s ease !important;
+}
+
+tbody tr:hover {
+  background: rgba(163,184,153,.13) !important;
+}
+
+/* Glass form controls */
+input, select, textarea {
+  border-radius: 9px !important;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.07) !important;
+}
+
+/* Subtle animation */
+@keyframes glassEntrance {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page.active .panel,
+.page.active .stat-card {
+  animation: glassEntrance .55s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
