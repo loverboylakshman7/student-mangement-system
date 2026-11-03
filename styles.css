@@ -1134,3 +1134,59 @@ dialog{background:linear-gradient(145deg,#1E3A2E,#0F1F17)!important;color:#E5E7D
 
 /* Settings view */
 .settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}.settings-panel{margin:0}.settings-copy{color:var(--cf-sage);line-height:1.7;font-size:13px;margin:0 0 17px}.settings-actions{display:flex;flex-wrap:wrap;gap:10px}.settings-list{padding-left:20px;margin:0 0 18px;color:#C7CBB8;line-height:1.9;font-size:13px}.settings-note{display:grid;gap:5px;padding:13px;border:1px solid var(--cf-border);border-radius:10px;background:rgba(61,67,55,.28)}.settings-note b{color:#E5E7D8}.settings-note span{color:#C7CBB8;font-size:12px}.danger-button{padding:10px 15px;border:1px solid rgba(242,183,168,.35);border-radius:8px;background:rgba(160,75,61,.2);color:#F2B7A8;font-weight:700;font-size:12px}@media(max-width:760px){.settings-grid{grid-template-columns:1fr}}
+
+
+/* Combined palette: Midnight Blue + Starry Night + Night Sakura */
+:root{
+ --cf-bg:#0B0F2D;--cf-deep:#0B1026;--cf-panel:#1A264F;--cf-blue:#3247A8;
+ --cf-violet:#8A39B9;--cf-pink:#D28AE6;--cf-ice:#E0E7FF;--cf-soft:#FFE3FF;
+ --cf-text:#E0E7FF;--cf-muted:#B9C5F2;--cf-border:rgba(210,138,230,.22);
+ --ink:#E0E7FF;--muted:#B9C5F2;--line:rgba(224,231,255,.15);--canvas:#0B0F2D;
+ --navy:#0B1026;--blue:#5671C9;--green:#8A39B9;
+}
+html,body{background-color:#0B0F2D!important;color:#E0E7FF!important}
+body{background:radial-gradient(ellipse at 12% 12%,rgba(138,57,185,.24),transparent 40%),radial-gradient(ellipse at 88% 78%,rgba(86,113,201,.22),transparent 42%),radial-gradient(ellipse at 52% 105%,rgba(210,138,230,.12),transparent 40%),linear-gradient(135deg,#0B0F2D 0%,#1A0B1F 52%,#0B1026 100%)!important;background-attachment:fixed!important}
+.sidebar{background:rgba(11,16,38,.96)!important;border-right:1px solid rgba(210,138,230,.18)!important}
+.brand-mark{background:linear-gradient(145deg,#D28AE6,#8A39B9 55%,#3247A8)!important;box-shadow:0 8px 24px rgba(138,57,185,.32)!important}
+.topbar{background:rgba(26,38,79,.88)!important;border-bottom:1px solid rgba(224,231,255,.16)!important;backdrop-filter:blur(18px)}
+.breadcrumb,.breadcrumb b,.today{color:#E0E7FF!important}
+.avatar,.student-initial,.profile-avatar{background:#D28AE6!important;color:#1A0B1F!important;-webkit-text-fill-color:#1A0B1F!important}
+.page-heading h1,h1,h2,.panel-heading h2,.stat-card strong,.student-cell b,td,.profile-identity strong,.profile-grid b,.profile-history-title,.dialog-heading h2{color:#F1EEFF!important;-webkit-text-fill-color:#F1EEFF!important}
+.eyebrow,.nav-label,footer{color:#D28AE6!important}
+.muted,.panel-heading p,.stat-card small,.helper,.profile-grid small{color:#C4CFF4!important}
+.panel,.stat-card,.card,.dashboard-card,.feature-card{background:linear-gradient(145deg,rgba(50,71,168,.48),rgba(26,38,79,.94) 55%,rgba(26,11,31,.90))!important;border:1px solid rgba(210,138,230,.20)!important;border-top-color:rgba(224,231,255,.27)!important;box-shadow:0 16px 42px rgba(0,0,0,.28),inset 0 1px 0 rgba(224,231,255,.08)!important}
+.panel:hover,.stat-card:hover,.card:hover{border-color:rgba(210,138,230,.48)!important;box-shadow:0 22px 46px rgba(0,0,0,.34),0 0 24px rgba(138,57,185,.20)!important}
+.nav-link{color:#D9DFFF!important}
+.nav-link:hover,.nav-link.active{background:rgba(86,113,201,.22)!important;border-color:rgba(210,138,230,.22)!important;color:#FFE3FF!important}
+.nav-link.active{box-shadow:inset 3px 0 #D28AE6!important}
+.primary-button{background:linear-gradient(125deg,#5671C9,#8A39B9 72%,#D28AE6)!important;border:1px solid rgba(224,231,255,.25)!important;color:#fff!important;box-shadow:0 7px 20px rgba(11,15,45,.42),inset 0 1px 0 rgba(255,255,255,.16)!important}
+.primary-button:hover{filter:brightness(1.13)}
+.secondary-button,.quiet-button,.small-action{background:rgba(86,113,201,.18)!important;color:#E0E7FF!important;border:1px solid rgba(224,231,255,.22)!important}
+.small-action.danger,.danger-button{background:rgba(160,54,93,.20)!important;color:#FFE3FF!important;border-color:rgba(255,227,255,.25)!important}
+.search-box,.toolbar select,.toolbar input[type=date],.toolbar input[type=month],input,select,textarea,.form-grid input,.form-grid select{background:#E0E7FF!important;color:#1A0B1F!important;border-color:#8A39B9!important}
+.search-box input{background:transparent!important;color:#1A0B1F!important}
+input::placeholder{color:#59648F!important}
+th{color:#D28AE6!important;border-color:rgba(224,231,255,.18)!important}
+td,tbody td *,.student-cell b{color:#F1EEFF!important}
+tbody tr,table tbody tr{background:rgba(11,16,38,.25)!important}
+tbody tr:hover,table tbody tr:hover{background:rgba(86,113,201,.20)!important}
+.pill{background:rgba(138,57,185,.25)!important;color:#FFE3FF!important}
+.attendance-ring{filter:drop-shadow(0 8px 18px rgba(138,57,185,.22))}
+.attendance-ring:before{background:#E0E7FF!important}
+.attendance-ring strong,#ringValue{color:#1A264F!important;-webkit-text-fill-color:#1A264F!important}
+.attendance-ring small{color:#3247A8!important}
+.green-bg{background:#8A39B9!important}.orange-bg{background:#D28AE6!important}
+dialog{background:linear-gradient(145deg,#1A264F,#1A0B1F 78%,#0B0F2D)!important;color:#F1EEFF!important;border:1px solid rgba(210,138,230,.30)!important}
+.dialog-heading h2,.profile-identity strong,.profile-grid b,.profile-history-title{color:#F1EEFF!important}
+.icon-button{background:rgba(210,138,230,.16)!important;color:#FFE3FF!important}
+.profile-identity,.profile-grid div,.profile-history div{background:rgba(11,16,38,.38)!important;border-color:rgba(224,231,255,.17)!important}
+.toast{background:#0B1026!important;border:1px solid rgba(210,138,230,.28)!important;color:#FFE3FF!important}
+.settings-copy,.settings-list{color:#D4D9F6!important}
+.settings-note{background:rgba(26,11,31,.38)!important;border-color:rgba(210,138,230,.22)!important}
+.settings-note b{color:#FFE3FF!important}.settings-note span{color:#D4D9F6!important}
+.secure-note,.department-row .bar-track{background-color:rgba(26,11,31,.42)!important}
+::-webkit-scrollbar-track{background:#0B0F2D!important}
+::-webkit-scrollbar-thumb{background:linear-gradient(#D28AE6,#8A39B9,#3247A8)!important}
+::selection{background:#8A39B9!important;color:#FFE3FF!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* End combined night-sky palette */
