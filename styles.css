@@ -1127,3 +1127,7 @@ dialog{background:linear-gradient(145deg,#1E3A2E,#0F1F17)!important;color:#E5E7D
 ::selection{background:#6B7F67!important;color:#fff!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 /* End official forest palette */
+
+/* Sixth palette tone: charcoal for restrained secondary surfaces */
+:root{--cf-charcoal:#3D4337}
+.secure-note,.department-row .bar-track{background-color:rgba(61,67,55,.42)}
