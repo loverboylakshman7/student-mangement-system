@@ -1081,3 +1081,49 @@ dialog {
  .profile-grid { grid-template-columns:1fr; }
  .page-heading > .primary-button { width:100%; }
 }
+
+
+/* CAMPUSFLOW OFFICIAL PALETTE — applied globally */
+:root{--cf-bg:#0F1F17;--cf-deep:#1E3A2E;--cf-forest:#3E5A3F;--cf-leaf:#6B7F67;--cf-sage:#C7CBB8;--cf-text:#C7CBB8;--cf-muted:#B5BEA9;--cf-border:rgba(199,203,184,.20);--ink:#C7CBB8;--muted:#B5BEA9;--line:rgba(199,203,184,.16);--canvas:#0F1F17;--navy:#0F1F17;--blue:#6B7F67;--green:#6B7F67}
+html,body{background-color:#0F1F17!important;color:#C7CBB8!important}
+body{background:radial-gradient(ellipse at 12% 12%,rgba(107,127,103,.22),transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(62,90,63,.22),transparent 44%),linear-gradient(135deg,#0F1F17 0%,#1E3A2E 58%,#0F1F17 100%)!important;background-attachment:fixed!important}
+.sidebar{background:rgba(15,31,23,.94)!important;border-right:1px solid rgba(199,203,184,.16)!important}
+.brand-mark{background:linear-gradient(145deg,#6B7F67,#3E5A3F)!important;box-shadow:0 8px 24px rgba(107,127,103,.28)!important}
+.topbar{background:rgba(30,58,46,.88)!important;border-bottom:1px solid rgba(199,203,184,.18)!important}
+.breadcrumb,.breadcrumb b,.today{color:#C7CBB8!important}
+.avatar,.student-initial,.profile-avatar{background:#C7CBB8!important;color:#1E3A2E!important;-webkit-text-fill-color:#1E3A2E!important}
+.page-heading h1,h1,h2,.panel-heading h2,.stat-card strong,.student-cell b,td,.profile-identity strong,.profile-grid b,.profile-history-title,.dialog-heading h2{color:#E5E7D8!important;-webkit-text-fill-color:#E5E7D8!important}
+.eyebrow,.nav-label,footer{color:#AAB99F!important}
+.muted,.panel-heading p,.stat-card small,.helper,.profile-grid small{color:#C7CBB8!important}
+.panel,.stat-card,.card,.dashboard-card,.feature-card{background:linear-gradient(145deg,rgba(62,90,63,.72),rgba(30,58,46,.94))!important;border:1px solid rgba(199,203,184,.20)!important;border-top-color:rgba(199,203,184,.30)!important;box-shadow:0 16px 42px rgba(0,0,0,.24),inset 0 1px 0 rgba(199,203,184,.08)!important}
+.panel:hover,.stat-card:hover,.card:hover{border-color:rgba(199,203,184,.42)!important;box-shadow:0 22px 46px rgba(0,0,0,.30),0 0 22px rgba(107,127,103,.18)!important}
+.nav-link{color:#C7CBB8!important}
+.nav-link:hover,.nav-link.active{background:rgba(107,127,103,.25)!important;border-color:rgba(199,203,184,.20)!important;color:#F0F0E6!important}
+.nav-link.active{box-shadow:inset 3px 0 #C7CBB8!important}
+.primary-button{background:linear-gradient(135deg,#6B7F67,#3E5A3F)!important;border:1px solid rgba(199,203,184,.28)!important;color:#fff!important;box-shadow:0 7px 20px rgba(15,31,23,.34),inset 0 1px 0 rgba(199,203,184,.16)!important}
+.primary-button:hover{filter:brightness(1.12)}
+.secondary-button,.quiet-button,.small-action{background:rgba(199,203,184,.13)!important;color:#E5E7D8!important;border:1px solid rgba(199,203,184,.24)!important}
+.small-action.danger{background:rgba(160,75,61,.18)!important;color:#F2B7A8!important;border-color:rgba(242,183,168,.25)!important}
+.search-box,.toolbar select,.toolbar input[type=date],.toolbar input[type=month],input,select,textarea,.form-grid input,.form-grid select{background:#C7CBB8!important;color:#1E3A2E!important;border-color:#6B7F67!important}
+.search-box input{background:transparent!important;color:#1E3A2E!important}
+input::placeholder{color:#596A55!important}
+th{color:#C7CBB8!important;border-color:rgba(199,203,184,.18)!important}
+td,tbody td *,.student-cell b{color:#E5E7D8!important}
+tbody tr,table tbody tr{background:rgba(15,31,23,.20)!important}
+tbody tr:hover,table tbody tr:hover{background:rgba(107,127,103,.20)!important}
+.pill{background:rgba(107,127,103,.24)!important;color:#DCE6D3!important}
+.attendance-ring{filter:drop-shadow(0 8px 18px rgba(107,127,103,.18))}
+.attendance-ring:before{background:#C7CBB8!important}
+.attendance-ring strong,#ringValue{color:#1E3A2E!important;-webkit-text-fill-color:#1E3A2E!important}
+.attendance-ring small{color:#3E5A3F!important}
+.green-bg{background:#6B7F67!important}.orange-bg{background:#C7CBB8!important}
+dialog{background:linear-gradient(145deg,#1E3A2E,#0F1F17)!important;color:#E5E7D8!important;border:1px solid rgba(199,203,184,.25)!important}
+.dialog-heading h2,.profile-identity strong,.profile-grid b,.profile-history-title{color:#E5E7D8!important}
+.icon-button{background:rgba(199,203,184,.16)!important;color:#E5E7D8!important}
+.profile-identity,.profile-grid div,.profile-history div{background:rgba(15,31,23,.32)!important;border-color:rgba(199,203,184,.18)!important}
+.toast{background:#0F1F17!important;border:1px solid rgba(199,203,184,.22)}
+::-webkit-scrollbar-track{background:#0F1F17!important}
+::-webkit-scrollbar-thumb{background:linear-gradient(#6B7F67,#3E5A3F)!important}
+::selection{background:#6B7F67!important;color:#fff!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* End official forest palette */
