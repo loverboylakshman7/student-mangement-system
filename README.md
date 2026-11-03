@@ -12,7 +12,7 @@ Open [CampusFlow](https://loverboylakshman7.github.io/student-mangement-system/)
 - CSV export for student and attendance records
 - JSON backup and restore from Settings
 - Student profile dialog with attendance history
-- Responsive layout, reduced-motion support and forest-green theme
+- Responsive layout, reduced-motion support and midnight-blue, starry-night and night-sakura theme
 
 ## Run locally
 Open `index.html` in a modern browser, or use VS Code Live Server. No package installation or build process is required.
