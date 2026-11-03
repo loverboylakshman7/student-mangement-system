@@ -1131,3 +1131,6 @@ dialog{background:linear-gradient(145deg,#1E3A2E,#0F1F17)!important;color:#E5E7D
 /* Sixth palette tone: charcoal for restrained secondary surfaces */
 :root{--cf-charcoal:#3D4337}
 .secure-note,.department-row .bar-track{background-color:rgba(61,67,55,.42)}
+
+/* Settings view */
+.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}.settings-panel{margin:0}.settings-copy{color:var(--cf-sage);line-height:1.7;font-size:13px;margin:0 0 17px}.settings-actions{display:flex;flex-wrap:wrap;gap:10px}.settings-list{padding-left:20px;margin:0 0 18px;color:#C7CBB8;line-height:1.9;font-size:13px}.settings-note{display:grid;gap:5px;padding:13px;border:1px solid var(--cf-border);border-radius:10px;background:rgba(61,67,55,.28)}.settings-note b{color:#E5E7D8}.settings-note span{color:#C7CBB8;font-size:12px}.danger-button{padding:10px 15px;border:1px solid rgba(242,183,168,.35);border-radius:8px;background:rgba(160,75,61,.2);color:#F2B7A8;font-weight:700;font-size:12px}@media(max-width:760px){.settings-grid{grid-template-columns:1fr}}
