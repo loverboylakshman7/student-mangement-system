@@ -1190,3 +1190,47 @@ dialog{background:linear-gradient(145deg,#1A264F,#1A0B1F 78%,#0B0F2D)!important;
 ::selection{background:#8A39B9!important;color:#FFE3FF!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 /* End combined night-sky palette */
+
+
+/* Premium motion system — smooth, restrained and accessible */
+@keyframes cfFadeUp{from{opacity:0;transform:translate3d(0,22px,0);filter:blur(4px)}to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}}
+@keyframes cfFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes cfSlideIn{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@keyframes cfAmbient{0%,100%{background-position:0% 50%,100% 50%,50% 100%,0% 50%}50%{background-position:8% 45%,92% 55%,48% 90%,100% 50%}}
+@keyframes cfShimmer{0%{background-position:180% 0}100%{background-position:-180% 0}}
+@keyframes cfRingIn{from{transform:scale(.82) rotate(-35deg);opacity:.25}to{transform:scale(1) rotate(0);opacity:1}}
+.app-shell{animation:cfFadeIn .7s ease both}
+body{background-size:160% 160%,160% 160%,160% 160%,220% 220%!important;animation:cfAmbient 26s ease-in-out infinite}
+.sidebar{animation:cfSlideIn .6s cubic-bezier(.2,.75,.25,1) both}
+.brand{animation:cfFadeUp .65s .08s both}
+.sidebar nav .nav-link{transition:transform .28s cubic-bezier(.2,.8,.2,1),background .28s ease,color .28s ease,box-shadow .28s ease}
+.sidebar nav .nav-link:hover{transform:translateX(5px)}
+.topbar{animation:cfFadeUp .55s .1s both}
+.page-heading{animation:cfFadeUp .65s .14s both}
+.page-heading h1{background:linear-gradient(100deg,#F1EEFF 10%,#D28AE6 48%,#E0E7FF 82%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:cfShimmer 8s linear infinite}
+.stat-grid .stat-card{animation:cfFadeUp .65s cubic-bezier(.2,.75,.25,1) both}
+.stat-grid .stat-card:nth-child(1){animation-delay:.1s}.stat-grid .stat-card:nth-child(2){animation-delay:.18s}.stat-grid .stat-card:nth-child(3){animation-delay:.26s}.stat-grid .stat-card:nth-child(4){animation-delay:.34s}
+.content-grid>.panel,.view>.panel,.settings-grid>.panel{animation:cfFadeUp .68s .2s cubic-bezier(.2,.75,.25,1) both}
+.panel,.stat-card{transform-style:preserve-3d;transition:border-color .35s ease,box-shadow .4s cubic-bezier(.2,.8,.2,1),background .35s ease}
+.stat-card:hover,.panel:hover{transform:translateY(-5px);box-shadow:0 24px 55px rgba(0,0,0,.36),0 0 26px rgba(138,57,185,.16),inset 0 1px rgba(224,231,255,.12)!important}
+.stat-icon{transition:transform .4s cubic-bezier(.2,.8,.2,1),filter .35s ease}
+.stat-card:hover .stat-icon{transform:translateY(-3px) rotate(-8deg) scale(1.1);filter:drop-shadow(0 5px 12px rgba(210,138,230,.25))}
+.primary-button,.secondary-button,.quiet-button,.small-action,.danger-button,.icon-button{position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,filter .3s ease}
+.primary-button:before,.secondary-button:before,.quiet-button:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.18) 48%,transparent 72%);transform:translateX(-130%);transition:transform .65s ease}
+.primary-button:hover:before,.secondary-button:hover:before,.quiet-button:hover:before{transform:translateX(130%)}
+.primary-button:hover,.secondary-button:hover,.quiet-button:hover,.small-action:hover,.danger-button:hover,.icon-button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.primary-button:active,.secondary-button:active,.quiet-button:active,.small-action:active{transform:translateY(0) scale(.98)}
+.search-box,input,select,textarea{transition:border-color .25s ease,box-shadow .25s ease}
+.search-box:focus-within,input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 3px rgba(210,138,230,.20),0 0 18px rgba(138,57,185,.12)!important}
+tbody tr{animation:cfFadeUp .4s ease both;transition:background .25s ease,transform .25s ease}
+tbody tr:hover{transform:translateX(3px)}
+.student-initial{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
+tbody tr:hover .student-initial{transform:scale(1.1) rotate(-5deg);box-shadow:0 5px 15px rgba(210,138,230,.22)}
+.attendance-ring{animation:cfRingIn .85s .22s cubic-bezier(.2,.8,.2,1) both}
+dialog[open]{animation:cfFadeUp .32s cubic-bezier(.2,.8,.2,1) both}
+dialog::backdrop{animation:cfFadeIn .25s ease both;background:rgba(4,7,22,.72);backdrop-filter:blur(7px)}
+.view:not(.hidden){animation:cfFadeIn .3s ease both}
+.brand-mark{transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease}
+.brand:hover .brand-mark{transform:rotate(-8deg) scale(1.08);box-shadow:0 0 30px rgba(210,138,230,.35)!important}
+@media(hover:none){.stat-card:hover,.panel:hover{transform:none}.sidebar nav .nav-link:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){body,.app-shell,.sidebar,.brand,.topbar,.page-heading,.page-heading h1,.stat-grid .stat-card,.content-grid>.panel,.view>.panel,.settings-grid>.panel,.attendance-ring,tbody tr,dialog[open],.view:not(.hidden){animation:none!important}*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
